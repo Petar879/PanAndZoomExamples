@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PanAndZoomExamplesProject.Pages.PanGestureRecognizerPage"
+             xmlns:local="clr-namespace:PanAndZoomExamplesProject.Pages"
+             Title="PanGestureRecognizerPage">
+
+    <local:PanContainer>
+        <Image Source="dotnet_bot.png" WidthRequest="1024" HeightRequest="768" />
+    </local:PanContainer>
+</ContentPage>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PanAndZoomExamplesProject.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PanAndZoomExamplesProject"
+    xmlns:pages="clr-namespace:PanAndZoomExamplesProject.Pages"
+    xmlns:blazorPages="clr-namespace:PanAndZoomExamplesProject.Components.Pages"
+    Title="PanAndZoomExamplesProject">
+
+    <TabBar>
+        <Tab Title="Gesture recognizers">
+            <ShellContent Title="Pan Gesture"
+                          ContentTemplate="{DataTemplate pages:PanGestureRecognizerPage}" />
+            <ShellContent Title="Pinch Gesture"
+                          ContentTemplate="{DataTemplate pages:PinchGestureRecognizerPage}" />
+            <ShellContent Title="Pan and Pinch container"
+                          ContentTemplate="{DataTemplate pages:PanPinchContainerPage}" />
+        </Tab>
+
+        <Tab Title="Libraries">
+            <ShellContent Title="FreekyControls"
+                          ContentTemplate="{DataTemplate pages:FreakyControlsPage}" /> 
+        </Tab>
+        
+        <Tab Title="Blazor Hybrid">
+            <ShellContent Title="BlazorPanzoom">
+                <ShellContent.ContentTemplate>
+                    <DataTemplate>
+                        <ContentPage>
+                            <BlazorWebView HostPage="wwwroot/index.html">
+                                <BlazorWebView.RootComponents>
+                                    <RootComponent Selector="#app" ComponentType="{x:Type blazorPages:BlazorPanzoomComponent}" />
+                                </BlazorWebView.RootComponents>
+                            </BlazorWebView>
+                        </ContentPage>
+                    </DataTemplate>
+                </ShellContent.ContentTemplate>
+            </ShellContent>
+        </Tab>
+    </TabBar>
+
+</Shell>
